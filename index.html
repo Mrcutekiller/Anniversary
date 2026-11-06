@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 1 Year, My Little Princess 💕</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Dancing+Script:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Special+Elite&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══════════ STAGE 0 — INTRO ══════════ -->
+<div id="stage-intro" class="stage active">
+  <canvas id="star-canvas"></canvas>
+  <div class="intro-center">
+    <div class="intro-label">✨ One Whole Year ✨</div>
+    <div class="heart-box" id="heart-tap">
+      <div class="heart-glow"></div>
+      <svg class="heart-svg" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 85 C50 85 5 55 5 28 C5 14 16 5 28 5 C37 5 44 10 50 18 C56 10 63 5 72 5 C84 5 95 14 95 28 C95 55 50 85 50 85Z"/>
+      </svg>
+      <div class="ribbon"></div>
+    </div>
+    <p class="tap-hint">tap to celebrate with me 🎊</p>
+  </div>
+</div>
+
+<!-- ══════════ STAGE 1 — COUNTER ══════════ -->
+<div id="stage-counter" class="stage">
+  <canvas id="star-canvas2"></canvas>
+  <div class="counter-top-label">🎂 Happy 1st Anniversary, My Little Princess 🎂</div>
+  <div class="counter-layout">
+    <div class="portrait-wrap left-portrait">
+      <div class="portrait-ring">
+        <img src="photos/photo_2026-11-06_11-59-08.jpg" class="portrait-img" alt="Biruk" />
+      </div>
+      <span class="neon-name">Biruk</span>
+    </div>
+    <div class="center-counter">
+      <canvas id="heart-particle-canvas"></canvas>
+      <div class="counter-text">
+        <div class="counter-label">Together since Nov 8, 2025</div>
+        <div id="days-count" class="counter-days">365</div>
+        <div class="counter-sub" id="counter-hms">00h 00m 00s</div>
+        <div class="counter-unit">days of love</div>
+      </div>
+    </div>
+    <div class="portrait-wrap right-portrait">
+      <div class="portrait-ring">
+        <img src="photos/photo_2026-11-06_11-59-02.jpg" class="portrait-img" alt="My Little Princess" />
+      </div>
+      <span class="neon-name neon-pink">Nuhami 👑</span>
+    </div>
+  </div>
+  <button class="next-btn glow-btn" id="btn-to-sphere">See Our Year Together ✨</button>
+</div>
+
+<!-- ══════════ STAGE 2 — SPHERE ══════════ -->
+<div id="stage-sphere" class="stage">
+  <canvas id="star-canvas3"></canvas>
+  <h2 class="sphere-title">Our Universe of Memories 🌌</h2>
+  <div id="sphere-container">
+    <div id="sphere"></div>
+  </div>
+  <p class="sphere-hint">drag to spin &nbsp;•&nbsp; tap a photo to view</p>
+  <button class="next-btn glow-btn" id="btn-to-magazine">Read Your Anniversary Letter 💌</button>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox hidden">
+  <button id="lightbox-close">✕</button>
+  <div class="lightbox-inner">
+    <img id="lightbox-img" src="" alt="" />
+    <div class="lightbox-caption">
+      <div class="caption-heart">💕</div>
+      <p id="lightbox-text"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ STAGE 3 — MAGAZINE ══════════ -->
+<div id="stage-magazine" class="stage">
+  <div class="magazine-wrapper">
+
+    <!-- PAGE 1 — Cover -->
+    <div class="mag-page active" id="page-1">
+      <div class="mag-top-bar">
+        <span>ANNIVERSARY EDITION</span>
+        <span>FOR: MY PRINCESS 👑</span>
+        <span>NOV 8, 2026</span>
+      </div>
+      <div class="mag-divider"></div>
+      <h1 class="mag-title">1 Year Edition</h1>
+      <div class="mag-divider"></div>
+      <div class="mag-sub-bar">
+        <span>NOV 8, 2025 – NOV 8, 2026</span>
+        <span>YOU ARE MY WORLD</span>
+        <span>FOREVER &amp; ALWAYS</span>
+      </div>
+      <div class="mag-cover-hero">
+        <div class="cupid-left">🎂</div>
+        <div class="will-you">
+          <span class="will-big">HAPPY 1 YEAR</span>
+          <em class="val-script">Anniversary!</em>
+        </div>
+        <div class="cupid-right">🎉</div>
+      </div>
+      <div class="mag-dedication">
+        EXCLUSIVE DELIVERY FOR THE MOST SPECIAL PERSON<br/>
+        <em>My little princess — my favourite human on earth 🌍</em>
+      </div>
+      <div class="mag-article-row">
+        <div class="mag-article">
+          <div class="article-label">Love Journal &nbsp;•&nbsp; Year One</div>
+          <p class="article-body">
+            365 days ago the universe did something extraordinary —
+            it brought you into my life. And every single day since
+            then has been better than the last. You turned ordinary
+            moments into memories I'll treasure forever. Here's to
+            one whole year of us, and to every year that follows. 💕
+          </p>
+        </div>
+        <div class="mag-photo-col">
+          <div class="article-photo-frame">
+            <img src="photos/photo_2026-11-06_11-59-05.jpg" alt="Us" />
+          </div>
+          <div class="accept-banner">365 days &amp; still not enough 💞</div>
+        </div>
+      </div>
+      <div class="coupon-section">
+        <div class="scissor-line">✂ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─</div>
+        <div class="coupons">
+          <div class="coupon"><div class="coupon-inner"><span class="cpn-no">YEAR 1</span><div class="cpn-mid">ANNIVERSARY GIFT:<br/><strong>Surprise Date 🌹</strong></div></div></div>
+          <div class="coupon"><div class="coupon-inner"><span class="cpn-no">YEAR 1</span><div class="cpn-mid">ANNIVERSARY GIFT:<br/><strong>Your Fav Dinner 🍽️</strong></div></div></div>
+          <div class="coupon"><div class="coupon-inner"><span class="cpn-no">YEAR 1</span><div class="cpn-mid">ANNIVERSARY GIFT:<br/><strong>Unlimited Hugs 🤗</strong></div></div></div>
+        </div>
+        <div class="scissor-line">─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ✂</div>
+      </div>
+      <div class="mag-nav"><button class="mag-btn" onclick="goPage(2)">NEXT PAGE →</button></div>
+    </div>
+
+    <!-- PAGE 2 — 5 Reasons -->
+    <div class="mag-page" id="page-2">
+      <div class="mag-top-bar">
+        <span>ANNIVERSARY EDITION</span>
+        <span>FOR: MY PRINCESS 👑</span>
+        <span>NOV 8, 2026</span>
+      </div>
+      <div class="mag-divider"></div>
+      <div class="reasons-header">
+        <div class="cupid-left">💘</div>
+        <div>
+          <div class="reasons-num">05 Reasons</div>
+          <div class="reasons-sub">this year with you was</div>
+          <div class="reasons-script">The Best Year of My Life</div>
+        </div>
+        <div class="cupid-right">💘</div>
+      </div>
+      <div class="reasons-grid">
+        <div class="reason-cell"><span class="r-num">1</span><p>Your smile still makes me forget everything else in the world.</p></div>
+        <div class="reason-cell heart-cell">❤️</div>
+        <div class="reason-cell"><span class="r-num">3</span><p>You make every single day feel like the best day of my life.</p></div>
+        <div class="reason-cell heart-cell">❤️</div>
+        <div class="reason-cell"><span class="r-num">2</span><p>After 365 days, my heart still races every time I see you.</p></div>
+        <div class="reason-cell heart-cell">❤️</div>
+        <div class="reason-cell"><span class="r-num">4</span><p>No one else could ever make me laugh or feel this loved.</p></div>
+        <div class="reason-cell heart-cell">❤️</div>
+        <div class="reason-cell"><span class="r-num">5</span><p>Choosing you was the best decision I ever made. Period.</p></div>
+      </div>
+      <div class="signs-section">
+        <div class="signs-header">THIS YEAR WAS PROOF THAT</div>
+        <div class="signs-title">We Are Made For Each Other</div>
+        <div class="signs-sub">365 days of evidence confirms:</div>
+        <div class="signs-cards">
+          <div class="sign-card">Every argument made us stronger, not weaker. 💪</div>
+          <div class="sign-card">Every moment with you is a memory I never want to forget. 📸</div>
+          <div class="sign-card">I would choose you again every single day. 💍</div>
+        </div>
+      </div>
+      <div class="mag-nav">
+        <button class="mag-btn" onclick="goPage(1)">← PREV PAGE</button>
+        <button class="mag-btn" onclick="goPage(3)">NEXT PAGE →</button>
+      </div>
+    </div>
+
+    <!-- PAGE 3 — My Promise -->
+    <div class="mag-page" id="page-3">
+      <div class="mag-top-bar">
+        <span>ANNIVERSARY EDITION</span>
+        <span>FOR: MY PRINCESS 👑</span>
+        <span>NOV 8, 2026</span>
+      </div>
+      <div class="mag-divider"></div>
+      <h2 class="big-q-title">My Promise to You 🌹</h2>
+      <p class="big-q-body">
+        One year ago I made the best decision of my life.
+        I chose you. And every single day since then, you've
+        shown me what it truly means to be loved.
+        <br/><br/>
+        So on our first anniversary, with my whole heart:
+      </p>
+      <div class="big-q-main">
+        <div class="big-q-text1">Here's to forever,</div>
+        <div class="big-q-script">my little princess 💕</div>
+      </div>
+      <p class="big-q-choose">And I have one question for you:</p>
+      <div class="answer-btns">
+        <button class="ans-btn" onclick="sayYes()">Best year of my life too! 💞</button>
+        <button class="ans-btn" onclick="sayYes()">Can't wait for year 2! 🎊</button>
+      </div>
+      <div class="mag-nav">
+        <button class="mag-btn" onclick="goPage(2)">← PREV PAGE</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════ STAGE 4 — FINALE ══════════ -->
+<div id="stage-finale" class="stage">
+  <canvas id="fireworks-canvas"></canvas>
+  <div class="finale-card">
+    <h2 class="finale-confirmed">Happy 1 Year, My Princess! 🎊</h2>
+    <div class="lace-heart">
+      <div class="lace-inner">
+        <em class="lace-text">365 days &<br/>still falling for you.</em>
+      </div>
+      <div class="locket">
+        <span class="locket-initial">B</span>
+        <span class="locket-heart-icon">💛</span>
+        <span class="locket-initial">N</span>
+      </div>
+    </div>
+    <p class="finale-msg">
+      Thank you for the most beautiful year of my life, my little princess. 💕<br/>
+      Thank you for your love, your patience, your smile.<br/>
+      I love you more than words can say. 🌹<br/><br/>
+      <strong>Here's to Year 2 and every year after. 🥂</strong>
+    </p>
+
+    <!-- Cake -->
+    <div class="cake-section">
+      <p class="cake-hint">🎂 Tap the cake to blow out candles & make a wish 🎂</p>
+      <div class="cake-wrap" id="cake-wrap" onclick="blowCandles()" role="button" tabindex="0" title="Tap to blow candles">
+        <div class="candles">
+          <div class="candle"><div class="flame" id="f1"></div></div>
+          <div class="candle"><div class="flame" id="f2"></div></div>
+          <div class="candle"><div class="flame" id="f3"></div></div>
+          <div class="candle"><div class="flame" id="f4"></div></div>
+          <div class="candle"><div class="flame" id="f5"></div></div>
+        </div>
+        <div class="cake-body">
+          <div class="cake-top"><span class="cake-num">1</span><span class="cake-year">Year</span></div>
+          <div class="cake-middle"></div>
+          <div class="cake-bottom"></div>
+        </div>
+      </div>
+      <button class="cake-btn" id="cake-blow-btn" onclick="blowCandles()">🌬️ Tap cake to blow candles</button>
+    </div>
+  </div>
+
+  <!-- Dark wish overlay (Biruk's Wish) -->
+  <div id="wish-overlay" class="wish-overlay hidden">
+    <div class="wish-stars" id="wish-stars"></div>
+    <div class="wish-content">
+      <div class="wish-icon">🕯️</div>
+      <h3 class="wish-title">Biruk's Wish 🤍</h3>
+      <div class="wish-subtitle">For My Little Princess 👑</div>
+      <p class="wish-text">
+        We will be together until infinity itself runs out of numbers.<br/><br/>
+        Not even death can part what God himself tied together —<br/>
+        because if there's a life after this one,<br/>
+        I will find you there too.<br/><br/>
+        I will love you in this life, and meet you again in the next.<br/>
+        And every single life after that.<br/><br/>
+        <em>Until stars forget to shine,<br/>
+        until time itself forgets to move —<br/>
+        I will still be yours, my little princess. 💕</em>
+      </p>
+      <button class="glow-btn" onclick="restart()" style="margin-top:24px;">↩ Replay from the start</button>
+    </div>
+  </div>
+</div>
+
+<!-- Music Toggle -->
+<button id="music-toggle" title="Toggle music">🎵</button>
+<audio id="bg-music" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+</audio>
+
+<script src="app.js"></script>
+</body>
+</html>
